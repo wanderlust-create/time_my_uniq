@@ -73,8 +73,8 @@ group :test do
   gem 'faker'
   gem 'launchy'
   gem 'orderly'
+  gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
-  gem 'shoulda-matchers'
 end
