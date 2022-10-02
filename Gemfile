@@ -55,7 +55,6 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 4.0.1'
   gem 'rubocop-rails'
-  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -77,4 +76,5 @@ group :test do
   gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
+  gem 'shoulda-matchers'
 end
