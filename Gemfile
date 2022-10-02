@@ -54,6 +54,7 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 4.0.1'
   gem 'shoulda-matchers'
+  gem 'figaro'
 end
 
 group :development do
@@ -73,5 +74,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
+  gem 'launchy'
+  gem 'orderly'
 end
 
