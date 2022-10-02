@@ -55,6 +55,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.1'
   gem 'shoulda-matchers'
   gem 'figaro'
+  gem 'rubocop-rails'
 end
 
 group :development do
