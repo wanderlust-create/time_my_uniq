@@ -24,3 +24,8 @@ Style/FrozenStringLiteralComment:
 
 Style/Documentation:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+  - db/schema.rb
+  # IgnoredMethods: ['describe', 'context']
