@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_221_005_173_700) do
+ActiveRecord::Schema[7.0].define(version: 20_221_005_180_400) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -52,6 +52,16 @@ ActiveRecord::Schema[7.0].define(version: 20_221_005_173_700) do
     t.index ['user_id'], name: 'index_my_lives_on_user_id'
   end
 
+  create_table 'tasks', force: :cascade do |t|
+    t.bigint 'action_id', null: false
+    t.string 'name'
+    t.text 'description'
+    t.float 'points'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['action_id'], name: 'index_tasks_on_action_id'
+  end
+
   create_table 'users', force: :cascade do |t|
     t.string 'user_name'
     t.string 'email'
@@ -64,4 +74,5 @@ ActiveRecord::Schema[7.0].define(version: 20_221_005_173_700) do
   add_foreign_key 'goals', 'life_parts'
   add_foreign_key 'life_parts', 'my_lives'
   add_foreign_key 'my_lives', 'users'
+  add_foreign_key 'tasks', 'actions'
 end

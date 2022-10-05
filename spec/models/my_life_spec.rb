@@ -10,6 +10,6 @@ RSpec.describe MyLife, type: :model do
     it { should have_many(:life_parts) }
     it { should have_many(:goals).through(:life_parts) }
     it { should have_many(:actions).through(:goals) }
-    # it { should have_many(:tasks).through(:actions) }
+    it { should have_many(:tasks).through(:actions) }
   end
 end

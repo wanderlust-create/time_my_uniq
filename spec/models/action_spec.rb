@@ -8,6 +8,6 @@ RSpec.describe Action, type: :model do
 
   describe 'relationships' do
     it { should belong_to(:goal) }
-    # it { should have_many(:tasks) }
+    it { should have_many(:tasks) }
   end
 end
