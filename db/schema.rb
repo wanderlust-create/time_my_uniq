@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_221_005_181_408) do
+ActiveRecord::Schema[7.0].define(version: 20_221_005_182_134) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -42,6 +42,13 @@ ActiveRecord::Schema[7.0].define(version: 20_221_005_181_408) do
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.index ['my_life_id'], name: 'index_life_parts_on_my_life_id'
+  end
+
+  create_table 'meditations', force: :cascade do |t|
+    t.string 'category'
+    t.text 'link'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
   create_table 'my_lives', force: :cascade do |t|
