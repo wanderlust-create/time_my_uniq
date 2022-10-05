@@ -4,7 +4,7 @@ class MyLife < ApplicationRecord
   has_many :life_parts, dependent: :destroy
   has_many :goals, through: :life_parts
   has_many :actions, through: :goals
-  # has_many :tasks, through: :actions
+  has_many :tasks, through: :actions
 
   validates :description, presence: true
 end

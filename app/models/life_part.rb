@@ -3,7 +3,7 @@ class LifePart < ApplicationRecord
 
   has_many :goals, dependent: :destroy
   has_many :actions, through: :goals
-  # has_many :tasks, through: :actions
+  has_many :tasks, through: :actions
 
   validates :name, presence: true
   validates :description, presence: true
