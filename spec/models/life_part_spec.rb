@@ -10,7 +10,7 @@ RSpec.describe LifePart, type: :model do
     describe 'relationships' do
       it { should belong_to(:my_life) }
       it { should have_many(:goals) }
-      # it { should have_many(:actions).through(:goals) }
+      it { should have_many(:actions).through(:goals) }
       # it { should have_many(:tasks).through(:actions) }
     end
 end
