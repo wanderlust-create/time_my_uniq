@@ -28,3 +28,9 @@ Style/Documentation:
 Metrics/BlockLength:
   Exclude:
   - db/schema.rb
+
+Metrics/MethodLength:
+  AllowedMethods: ['create']
+
+Metrics/AbcSize:
+  AllowedMethods: ['create']
