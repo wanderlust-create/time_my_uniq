@@ -10,9 +10,9 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    unless current_user
-      flash[:alert] = 'you must be logged in'
-      redirect_to '/'
-    end
+    return if current_user
+
+    flash[:alert] = t('.error.user_not_found')
+    redirect_to '/'
   end
 end

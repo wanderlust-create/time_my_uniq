@@ -1,0 +1,5 @@
+en:
+  application:
+    require_user:
+      error:
+        user_not_found: You must be logged in to access this site
