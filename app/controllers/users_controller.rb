@@ -9,13 +9,12 @@ class UsersController < ApplicationController
     if user
       session[:access_token] = auth_hash['credentials']['token']
       session[:user_id] = user.id
-      redirect_to '/dashboard'
     else
       new_user = User.create!(email: email, user_name: name)
       session[:access_token] = auth_hash['credentials']['token']
       session[:user_id] = new_user.id
-      redirect_to '/dashboard'
     end
+    redirect_to '/dashboard'
   end
 
   def logout

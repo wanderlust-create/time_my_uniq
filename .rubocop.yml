@@ -28,4 +28,3 @@ Style/Documentation:
 Metrics/BlockLength:
   Exclude:
   - db/schema.rb
-  # IgnoredMethods: ['describe', 'context']
