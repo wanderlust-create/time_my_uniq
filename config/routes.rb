@@ -6,5 +6,4 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#dashboard'
   get '/logout', to: 'users#logout'
   post '/logout', to: 'users#logout'
-
 end

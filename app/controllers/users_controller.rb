@@ -15,8 +15,8 @@ class UsersController < ApplicationController
       session[:access_token] = auth_hash['credentials']['token']
       session[:user_id] = new_user.id
       redirect_to '/dashboard'
+    end
   end
-end 
 
   def logout
     session[:user_id] = nil

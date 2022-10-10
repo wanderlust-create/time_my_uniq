@@ -33,12 +33,11 @@ gem 'jbuilder'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 gem 'bootstrap', '~> 4.0.0'
-gem 'jquery-rails'
 gem 'faraday'
+gem 'jquery-rails'
 gem 'omniauth-google-oauth2'
 
 # Use Sass to process CSS
