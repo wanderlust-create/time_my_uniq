@@ -1,21 +1,18 @@
 class ApplicationController < ActionController::Base
-    helper_method :logged_in?, :current_user
+  helper_method :current_user, :require_user, :logged_in?
 
-    def current_user
-        if session[:access_token]
-            session[:access_token]
-        end
-    end
+  def current_user
+    User.find(session[:user_id]) if session[:user_id]
+  end
 
-    def require_user
-        if!current_user
-            flash[:alert] = "Please log in or register for an account"
-            redirect_to root_path
-        end 
-    end
+  def logged_in?
+    current_user
+  end
 
-    def logged_in?
-        !!current_user
-    end 
+  def require_user
+    return if current_user
 
+    flash[:alert] = t('.error.user_not_found')
+    redirect_to '/'
+  end
 end
