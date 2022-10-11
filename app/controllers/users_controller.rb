@@ -14,11 +14,11 @@ class UsersController < ApplicationController
       session[:access_token] = auth_hash['credentials']['token']
       session[:user_id] = new_user.id
     end
-    redirect_to '/dashboard'
+    redirect_to my_uniq_time_dashboard_index_path(user)
   end
 
   def logout
-    session[:user_id] = nil
+    session.destroy
     redirect_to '/'
   end
 

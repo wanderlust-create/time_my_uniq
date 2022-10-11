@@ -38,3 +38,4 @@
 # Ignore simplecov coverage reports
 /coverage/*
 /spec/fixtures/*
+.DS_Store

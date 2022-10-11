@@ -24,16 +24,15 @@
     <nav class="navbar bg-dark">
       <% if logged_in? %>
         <ul class="welcome p-3" style="color:#FFFFFF">
-          <h1>Welcome, <%= current_user.name %>
+          <h1>Welcome, <%= current_user.user_name %>
           </h1>
         </ul>
-        <!-- <ul class="navbar-nav ml-auto p-2"> -->
-          <!-- <div class="btn-group">
-            <%= button_to "Home Page" , "/" , method: :get, class: "btn btn-light" %>
-              <%= button_to "Go to My SPINSPOT" , "/dashboard" , method: :get, class: "btn btn-light" %>
-                <%= button_to "Sign Out" , '/logout' , class: "btn btn-light" %>
-          </div> -->
-        <!-- </ul> -->
+        <ul class="navbar-nav ml-auto p-2">
+          <div class="btn-group">
+            <%= button_to "Take me to my dashboard", my_uniq_time_dashboard_index_path(current_user)  , method: :get, class: "btn btn-light" %>
+            <%= button_to "Sign Out" , '/logout' , class: "btn btn-light" %>
+          </div>
+        </ul>
         <% else %>
           <h1>Join SPINSPOT!!</h1>
           <ul class="nav-item float-right p-5">
