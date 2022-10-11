@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post '/logout', to: 'users#logout'
 
   namespace :my_uniq_time do
-    resources :dashboard, only: [:index, :show]
+    resources :dashboard, only: %i[index show]
     resources :life_parts
     resources :goals
     resources :actions
@@ -15,5 +15,4 @@ Rails.application.routes.draw do
     resources :positive_affirmations
     resources :meditations
   end
-
 end

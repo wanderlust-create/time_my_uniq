@@ -29,6 +29,9 @@ Metrics/BlockLength:
   Exclude:
   - db/schema.rb
 
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
 Metrics/MethodLength:
   AllowedMethods: ['create']
 
