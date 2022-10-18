@@ -1,0 +1,17 @@
+<h1>My Dashboard</h1>
+<div class="container-fluid p-1 bg-dark text-white text-center">
+    <h2>This is your dashboard, select a button to get started!</h2>
+    <div class="">
+        <h3>
+            <%= form_with url: my_uniq_time_life_parts_path, method: :post, local: true do |f| %>
+                <%= f.label :name, "Create a new Major Life Area" %>
+                    <%= f.text_field :name %><br>
+                        <%= f.label :description, "Describe why this is important to you" , required: true %>
+                            <%= f.text_field :description %>
+                                <%= f.submit 'Submit' %>
+                                    <% end %>
+        </h3>
+    </div>
+
+
+</div>
